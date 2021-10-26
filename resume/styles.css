@@ -37,10 +37,10 @@ body{
         margin: 0 !important;
     }
 
-    .print-button{
+    /* .print-button{
         top: unset !important;
         bottom: 16px !important;
-    }
+    } */
  }
 
 .print-button{
