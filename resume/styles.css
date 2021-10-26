@@ -4,8 +4,13 @@ body{
     width: 100%;
 }
 
+*{
+    -webkit-print-color-adjust: exact;
+}
+
 .body{
     margin: 1rem;
+    overflow-x: hidden;
 }
 
 @media print{
@@ -21,7 +26,27 @@ body{
         background-color: rgb(250,255,255, green, blue);
         box-shadow: 0 3px 8px -3px rgba(0,0,0,0.7);
     }
-    
+
+    .body{
+        margin: 0 !important;
+    }
+}
+
+@media (min-width:320px)  {
+    .body{
+        margin: 0 !important;
+    }
+
+    .print-button{
+        top: unset !important;
+        bottom: 16px !important;
+    }
+ }
+
+.print-button{
+    position: fixed;
+    top: 16px;
+    left: 16px; 
 }
 
 ul{
