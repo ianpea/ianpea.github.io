@@ -6,25 +6,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ianpea</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container p-3">
-        <div class="card d-flex flex-column justify-content-center align-items-center">
-            <div>Work In Progress...</div>
-            <a href="/resume/index.html">Resume</a>
-            <a href="/portfolio/d3/visualisation/index.html">D3 Visualization</a>
+    <div class="body-content preload">
+        <div class="header-wrapper">
+            <div class="header">
+                <div id="header-row-sticky" class="header-row-sticky">
+                    <div id="to-top-btn" class="m-auto ps-3 slide-in-left">
+                        <i class="fas fa-chevron-up fa-2x text-black-50"></i>
+                    </div>
+                    <div class="flex-fill">&nbsp;</div>
+                    <h1 class="header-end">
+                        <div class="resume-btn" onclick="window.open( '/resume/index.html', '_target');">
+                            Resume <span class="hideable"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </h1>
+                </div>
+                <div class="header-row">
+                    <img class="profile-pic slide-in-left" src="/assets/sad_baby.png" alt="profile pic">
+                    <h1 class="slide-in-left">Ian Pee</h1>
+                    <div class="flex-fill">&nbsp;</div>
+                    <h1 class="header-end">
+                        <div class="resume-btn" onclick="window.open( '/resume/index.html', '_target');">
+                            Resume <span id="resume-btn-ic" class="hideable hidden"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </h1>
+                </div>
+                <div>&nbsp;</div>
+                <div class="header-row">
+                    <h2 class="faded slide-in-left">Full Stack Engineer</h2>
+                    <div class="flex-fill">&nbsp;</div>
+                    <h3 class="header-end faded">
+                        <div class="location-btn">
+                            <i class="fas fa-map-marker-alt pt-1 me-2"></i> Singapore
+                            <span id="location-btn-ic" class="hideable hidden">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="portfolio-wrapper">
+                <div class="portfolio">
+                    <div id="portfolio-d3" class="slide-in-left">
+                        <div class="me-2">
+                            <h2 class="faded">D3</h2>
+                        </div>
+                        <div>
+                            <img src="/assets/portfolio-d3-preview.gif" alt="portfolio-d3 preview">
+                        </div>
+                        <div class="d-flex flex-fill">
+                            <span id="portfolio-d3-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="portfolio-ng" class="slide-in-left">
+                    <div class="me-2">
+                        <h2 class="faded">Angular</h2>
+                    </div>
+                    <div>
+                        Coming soon.
+                    </div>
+                    <div class="d-flex flex-fill">
+                        <span id="portfolio-ng-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x"></i></span>
+                    </div>
+                </div>
+                <div id="portfolio-ad" class="slide-in-left">
+                    <div class="me-2">
+                        <h2 class="faded">Android</h2>
+                    </div>
+                    <div>
+                        Coming soon.
+                    </div>
+                    <div class="d-flex flex-fill">
+                        <span id="portfolio-ad-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrapper">
+            <div class="footer">
+                <div class="footer-btn linkedin me-3" onclick="window.open( 'https://linkedin.com/in/ian-pee-wu-jian', '_target');">
+                    <i class="fab fa-linkedin-in p-2 me-2 border rounded-2 footer-btn-ic"></i>Linked In</div>
+                <div class="footer-btn github" onclick="window.open( 'https://github.com/ianpea', '_target');"><i class="fab fa-github p-2 me-2 border rounded-2 footer-btn-ic"></i>GitHub</div>
+            </div>
         </div>
     </div>
+    <script type="text/javascript" src="/index.js">
+    </script>
 </body>
 
 </html>
