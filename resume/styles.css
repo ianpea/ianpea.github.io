@@ -24,7 +24,6 @@ body {
         width: 8.5in;
         height: 12in;
         background-color: rgb(250, 255, 255, green, blue);
-        box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
     }
     .body {
         margin: 0 !important;
@@ -94,11 +93,11 @@ ul {
     padding-top: 0.3in;
 }
 
-.resume-header-details a {
+a {
     color: #cfd8dc;
 }
 
-.resume-header-details a:hover {
+a:hover {
     color: white;
 }
 

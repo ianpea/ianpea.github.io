@@ -37,7 +37,10 @@
                 </div>
                 <div class="header-row">
                     <h3 class="slide-in-left">Ian Pee</h3>
-                    <img class="profile-pic slide-in-left" src="/assets/sad_baby.png" alt="profile pic">
+                    <!-- <img class="profile-pic slide-in-left" src="/assets/sad_baby.png" alt="profile pic"> -->
+                    <a id="email-btn" class="slide-in-left ms-2" href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio...">
+                        <i class="fas fa-envelope fa-lg faded"></i>
+                    </a>
                     <div class="flex-fill">&nbsp;</div>
                     <div class="header-end">
                         <div class="resume-btn" onclick="window.open( '/resume/index.html', '_target');">
@@ -62,36 +65,35 @@
         </div>
         <div class="body">
             <div class="portfolio-wrapper">
-                <div class="portfolio">
-                    <div id="portfolio-d3" class="slide-in-left">
-                        <div class="me-2">
-                            <h2 class="faded">D3</h2>
-                        </div>
-                        <div>
-                            <img width="100%" src="/assets/portfolio-d3-preview.gif" alt="portfolio-d3 preview">
-                        </div>
-                        <div class="d-flex flex-fill">
-                            <span id="portfolio-d3-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x"></i></span>
-                        </div>
-                    </div>
-                </div>
-                <div id="portfolio-ng" class="slide-in-left">
+                <div id="portfolio-d3" class="portfolio slide-in-left">
                     <div class="me-2">
-                        <h2 class="faded">Angular</h2>
+                        <h2 class="faded"><img src="/assets/d3js-icon.svg" width="64" height="64" alt="d3-icon"></h2>
                     </div>
                     <div>
-                        Coming soon.
+                        <img class="portfolio-preview" src="/assets/portfolio-d3-preview.gif" alt="portfolio-d3 preview">
+                    </div>
+                    <div class="d-flex flex-fill">
+                        <span id="portfolio-d3-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x"></i></span>
+                    </div>
+                </div>
+                <div id="portfolio-ng" class="portfolio slide-in-left">
+                    <div class="me-2">
+                        <h2 class="ng"><i class="fab fa-angular fa-2x"></i></h2>
+                    </div>
+                    <div>
+                        <img class="portfolio-preview" src="/assets/cubiscan_assignment.gif" alt="portfolio-ng preview">
                     </div>
                     <div class="d-flex flex-fill">
                         <span id="portfolio-ng-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x"></i></span>
                     </div>
                 </div>
-                <div id="portfolio-ad" class="slide-in-left">
+                <div id="portfolio-ad" class="portfolio slide-in-left">
                     <div class="me-2">
-                        <h2 class="faded">Android</h2>
+                        <h2 class="ad"><i class="fab fa-android fa-2x"></i></h2>
                     </div>
                     <div>
-                        Coming soon.
+                        <!-- <img class="portfolio-preview" src="/assets/cubiscan_assignment.gif" alt="portfolio-ad preview"> -->
+                        <div class="card d-flex align-items-center justify-content-center" style="width: 650px; height: 350px;">Coming soon</div>
                     </div>
                     <div class="d-flex flex-fill">
                         <span id="portfolio-ad-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x"></i></span>

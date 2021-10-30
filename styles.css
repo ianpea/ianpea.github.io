@@ -2,13 +2,16 @@
     --gray: #90a4ae;
     --linkedin: #0e76a8;
     --github: #6e5494;
+    --ng: #dd1b16;
+    --ad: #3DDC84;
 }
 
 
 /* PC Screen */
 
 @media (min-width:320px) {
-    h2 {
+    h2,
+    h3 {
         line-height: 1.6;
         margin-bottom: 0rem;
     }
@@ -20,6 +23,12 @@
     }
     .github {
         color: var(--github);
+    }
+    .ng {
+        color: var(--ng);
+    }
+    .ad {
+        color: var(--ad);
     }
     .slide-in-left {
         animation: 1s slideinleft ease-in-out;
@@ -94,7 +103,6 @@
         flex-direction: column;
         max-width: 70%;
         padding-bottom: 1.5rem;
-        border-bottom: 1px solid lightgray;
     }
     .header-row {
         display: flex;
@@ -116,6 +124,7 @@
         flex: 1 1;
         flex-direction: column;
         justify-content: center;
+        border-top: 1px solid lightgray;
         overflow: hidden;
     }
     .navbar-wrapper {
@@ -149,20 +158,25 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 1rem;
+    }
+    .portfolio-preview {
+        width: 650px;
+        border: 1px;
     }
     .portfolio {
-        padding-top: 2rem;
-        max-width: 70%;
-    }
-    #portfolio-d3 {
         display: flex;
         flex-direction: row;
         align-items: center;
         position: relative;
         right: 0;
+        margin-top: 2rem;
     }
-    #portfolio-d3:hover {
+    .portfolio:hover {
         cursor: pointer;
+        box-shadow: #e9e9e9 20px 0px 20px 0px;
+        padding-left: 1rem;
+        padding-right: 1rem !important;
     }
     .resume-btn,
     .location-btn {
@@ -185,7 +199,10 @@
         flex-direction: row;
         justify-content: center;
         max-width: 60%;
-        padding-top: 3rem;
+        padding-top: 1rem;
+    }
+    .footer-btn {
+        font-size: 2rem;
     }
     .footer-btn:hover {
         cursor: pointer;
@@ -197,7 +214,7 @@
 
 @media (min-width:320px) and (max-width:600px) {
     .hideable {
-        margin-left: 0;
+        display: none;
     }
     .body-content {
         padding: 1rem 0.5rem 1rem 0.5rem;
@@ -230,10 +247,25 @@
     .portfolio {
         padding: 1rem 0.3rem 1rem 0.3rem;
         max-width: 100%;
+        box-shadow: #e9e9e9 20px 0px 20px 0px;
+    }
+    .portfolio {
+        flex-direction: column;
+    }
+    .portfolio-preview {
+        width: 100%;
     }
     .footer {
         max-width: 100%;
     }
+}
+
+.envelope:hover .envelope-closed {
+    display: inline;
+}
+
+.envelope-closed:hover .envelope {
+    display: none;
 }
 
 
