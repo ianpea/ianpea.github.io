@@ -1,0 +1,16 @@
+:root {
+    --gray: #90a4ae;
+    --ng: #dd1b16;
+}
+
+.ng {
+    background-color: var(--ng);
+}
+
+@media (min-width:320px) {}
+
+@media (min-width:320px) and (max-width:600px) {
+    img {
+        width: 100%;
+    }
+}
