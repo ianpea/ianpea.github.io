@@ -133,6 +133,7 @@
     }
     .portfolio-ic {
         width: 64px;
+        margin-top: 0.5rem;
     }
     .portfolio-wrapper {
         display: flex;
@@ -156,9 +157,18 @@
     }
     .portfolio:hover {
         cursor: pointer;
-        box-shadow: #e9e9e9 20px 0px 20px 0px;
+        box-shadow: black 20px 6px 20px 0px;
         padding-left: 1rem;
         padding-right: 1rem !important;
+    }
+    .portfolio-brand-ic {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        vertical-align: middle;
+        align-items: center;
+        margin-right: 1rem;
+        margin-top: 0.5rem;
     }
     .resume-btn,
     .location-btn {
@@ -237,10 +247,17 @@
     .portfolio {
         padding: 1rem 0.3rem 1rem 0.3rem;
         max-width: 100%;
-        box-shadow: #e0e0e0 20px 0px 20px 0px;
     }
     .portfolio {
         flex-direction: column;
+    }
+    .portfolio-brand-ic {
+        display: flex;
+        flex-direction: row;
+        margin-right: 0;
+    }
+    .portfolio-ic {
+        margin-top: 0;
     }
     .portfolio-preview {
         width: 100%;

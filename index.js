@@ -71,16 +71,16 @@ $(window).on('load', function() {
         window.open(baseUrl() + "/portfolio/d3/visualisation/index.html");
     })
 
-    $("#portfolio-ng").hover(function() {
-        $("#portfolio-ng-ic").removeClass("hidden")
+    $("#portfolio-main").hover(function() {
+        $("#portfolio-main-ic").removeClass("hidden")
     })
 
-    $("#portfolio-ng").mouseleave(function() {
-        $("#portfolio-ng-ic").addClass("hidden")
+    $("#portfolio-main").mouseleave(function() {
+        $("#portfolio-main-ic").addClass("hidden")
     })
 
-    $("#portfolio-ng").click(function() {
-        window.open(baseUrl() + "/portfolio/angular/index.html");
+    $("#portfolio-main").click(function() {
+        window.open(baseUrl() + "/portfolio/integrated-logistics-system/index.html");
     })
 
     $("#portfolio-ad").hover(function() {
