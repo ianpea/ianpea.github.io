@@ -153,7 +153,7 @@
         align-items: center;
         position: relative;
         right: 0;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     .portfolio:hover {
         cursor: pointer;
@@ -339,5 +339,14 @@
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes slideindown {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(0);
     }
 }

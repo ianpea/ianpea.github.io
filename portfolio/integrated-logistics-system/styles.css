@@ -65,6 +65,11 @@ body {
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    .system-nav {
+        display: flex;
+        flex: 1 1;
+        flex-direction: row;
+    }
 }
 
 @media (min-width:320px) and (max-width:600px) {
@@ -73,6 +78,11 @@ body {
     }
     .info-card {
         display: flex;
+        flex-direction: column;
+    }
+    .system-nav {
+        display: flex;
+        flex: 1 1;
         flex-direction: column;
     }
 }
