@@ -24,8 +24,6 @@ function baseUrl() {
 $(window).on('load', function() {
     $("body").removeClass("preload ");
 
-    console.log(mobileCheck())
-
     $("#email-btn").hover(function() {
         $("#email-btn i").addClass("fa-envelope-open-text");
         $("#email-btn i").removeClass("fa-envelope");

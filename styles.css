@@ -14,7 +14,7 @@
     top: 0px;
     width: 10%;
     height: 15%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
 }
 
 .video-wrapper,
@@ -49,16 +49,16 @@
         color: var(--ad);
     }
     .slide-in-left {
-        animation: 1s slideinleft ease-in-out;
+        animation: 0.5s slideinleft ease-in-out;
     }
     .slide-in-right {
-        animation: 1s slideinright ease-in-out;
+        animation: 0.5s slideinright ease-in-out;
     }
     .hideable {
         visibility: visible;
         width: 24px;
         opacity: 1;
-        transition: 0.5s all ease-in-out;
+        transition: 0.1s all ease-in-out;
         margin-left: 1rem;
         padding-top: 0.1rem;
     }
@@ -66,7 +66,7 @@
         visibility: hidden;
         width: 0px;
         opacity: 0;
-        transition: 0.5s all ease-in-out;
+        transition: 0.1s all ease-in-out;
     }
     body {
         display: flex;
@@ -98,11 +98,11 @@
     }
     .spin {
         display: inline-block;
-        animation: spin 1.5s;
+        animation: spin 0.7s;
         animation-iteration-count: 1;
     }
     .spin:hover {
-        animation: spin 1.5s;
+        animation: spin 0.7s;
         animation-iteration-count: 1;
     }
     .updown {
@@ -127,14 +127,14 @@
         align-items: center;
     }
     .header-row-sticky {
-        display: none !important;
+        display: none;
     }
     .header-end {
         display: flex;
         flex-direction: row-reverse;
         flex: 1 1;
         align-items: center;
-        animation: 1s slideinright ease-in-out;
+        animation: 0.5s slideinright ease-in-out;
     }
     .body {
         display: flex;
@@ -257,10 +257,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: white;
-        border-bottom: 1px solid var(--gray);
         z-index: 100;
-        box-shadow: 0 2px 1px 1px gray;
     }
     .profile-pic {
         margin-left: 0.5rem;
