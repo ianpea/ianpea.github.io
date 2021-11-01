@@ -12,11 +12,12 @@
 }
 
 body {
-    overflow-x: hidden;
+    display: block !important;
+    overflow-x: hidden !important;
     font-family: 'Roboto Mono', monospace;
-    text-align: justify;
-    background: black;
-    color: white;
+    text-align: justify !important;
+    background: black !important;
+    color: white !important;
 }
 
 @media (min-width:320px) {

@@ -6,6 +6,21 @@
     --ad: #3DDC84;
 }
 
+.logoblur {
+    position: absolute;
+    /* border: 1px solid white; */
+    pointer-events: none;
+    left: 0px;
+    top: 0px;
+    width: 10%;
+    height: 15%;
+    backdrop-filter: blur(10px);
+}
+
+.video-wrapper {
+    position: relative;
+}
+
 
 /* PC Screen */
 
@@ -142,6 +157,9 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 1rem;
+    }
+    .portfolio-preview-wrapper {
+        position: relative;
     }
     .portfolio-preview {
         width: 650px;
