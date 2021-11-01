@@ -101,11 +101,15 @@ $(window).on('load', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    var sticky = $('#header-row-sticky');
+    sticky.hide();
     $(window).scroll(function() {
-        var sticky = $('#header-row-sticky'),
+        sticky = $('#header-row-sticky'),
             scroll = $(window).scrollTop();
 
-        if (scroll >= 100) sticky.fadeIn(500);
-        else sticky.fadeOut(500);
+        if (mobileCheck()) {
+            if (scroll >= 150) sticky.fadeIn(500);
+            else sticky.fadeOut(500);
+        }
     });
 });

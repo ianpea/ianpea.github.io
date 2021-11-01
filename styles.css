@@ -205,7 +205,9 @@
     }
     .footer-wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     .footer {
         display: flex;
@@ -258,6 +260,8 @@
         left: 0;
         width: 100%;
         z-index: 100;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
     }
     .profile-pic {
         margin-left: 0.5rem;
