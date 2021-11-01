@@ -1,0 +1,44 @@
+:root {
+    --gray: #90a4ae;
+    --ng: #dd1b16;
+}
+
+.bg-ng {
+    background-color: var(--ng);
+}
+
+.text-ng {
+    color: var(--ng);
+}
+
+body {
+    display: block !important;
+    overflow-x: hidden !important;
+    font-family: 'Roboto Mono', monospace;
+    text-align: justify !important;
+    background: black !important;
+    color: white !important;
+}
+
+@media (min-width:320px) {
+    .info-card {
+        display: flex;
+        flex-direction: row;
+    }
+    .explain-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width:320px) and (max-width:600px) {
+    img {
+        width: 100%;
+    }
+    .info-card {
+        display: flex;
+        flex-direction: column;
+    }
+}
