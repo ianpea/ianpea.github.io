@@ -17,8 +17,11 @@
     backdrop-filter: blur(10px);
 }
 
-.video-wrapper {
+.video-wrapper,
+.img-wrapper {
+    display: flex;
     position: relative;
+    text-align: center;
 }
 
 
