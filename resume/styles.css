@@ -16,9 +16,10 @@ body {
 @media print {
     @page {
         size: 8.5in 12in;
+        margin: 0mm;
     }
     .resume-canvas {
-        margin: 0 auto;
+        margin: 0mm;
         box-sizing: border-box;
         padding: 0in;
         width: 8.5in;

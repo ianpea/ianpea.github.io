@@ -89,9 +89,9 @@ $(window).on('load', function() {
         $("#portfolio-ad-ic").addClass("hidden")
     })
 
-    // $("#portfolio-ad").click(function() {
-    //     window.open(baseUrl() + "/portfolio/android/index.html");
-    // })
+    $("#portfolio-ad").click(function() {
+        window.open(baseUrl() + "/portfolio/integrated-logistics-system/truck-app/index.html");
+    })
 
     $(".location-btn").click(function() {
         window.open("https://www.google.com.my/maps/place/Bukit+Timah/@1.3283923,103.7732555,14z/data=!3m1!4b1!4m5!3m4!1s0x31da0fd41e996daf:0x3485ce3101def927!8m2!3d1.3294113!4d103.8020777");

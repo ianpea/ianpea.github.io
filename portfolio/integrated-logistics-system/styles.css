@@ -22,14 +22,17 @@
 
 .bg-orange {
     background-color: var(--orange);
+    color: black;
 }
 
 .bg-yellow {
     background-color: var(--yellow);
+    color: black;
 }
 
 .bg-green {
     background-color: var(--green);
+    color: black;
 }
 
 .bg-blue {
