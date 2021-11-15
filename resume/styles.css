@@ -192,13 +192,13 @@ ul {
 .resume-timeline-line-sm {
     border-left: 1px solid black;
     margin-left: 12px;
-    height: 12px;
+    height: 8px;
 }
 
 .resume-timeline-line-pad {
     border-left: 1px solid black;
     margin-left: 12px;
-    max-height: 12px;
+    max-height: 8px;
 }
 
 .resume-timeline-dot {
@@ -217,6 +217,15 @@ ul {
     flex-direction: row;
     padding-left: 0.2in;
     padding-top: 3px;
+}
+
+.resume-timeline-content-skills {
+    display: flex;
+    flex: 1 1;
+    flex-direction: row;
+    padding-left: 0.15in;
+    padding-top: 3px;
+    font-size: 0.15in;
 }
 
 .resume-timeline-content-date-s {
