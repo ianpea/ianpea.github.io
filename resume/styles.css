@@ -67,12 +67,12 @@ ul {
 .resume-header {
     display: flex;
     flex-direction: column;
-    height: 2.2in;
+    height: 2.0in;
     background-color: #607d8b;
-    padding-top: 0.25in;
-    padding-right: 0.5in;
-    padding-bottom: 0.25in;
-    padding-left: 0.5in;
+    padding-top: 0.15in;
+    padding-right: 0.45in;
+    padding-bottom: 0.1in;
+    padding-left: 0.45in;
 }
 
 .resume-header-name {
@@ -91,7 +91,7 @@ ul {
     flex-wrap: wrap;
     font-size: 0.12in;
     color: white;
-    padding-top: 0.3in;
+    padding-top: 0.15in;
 }
 
 .resume-header-detail a,
@@ -117,9 +117,9 @@ ul {
     display: flex;
     flex-direction: column;
     padding-top: 0.25in;
-    padding-right: 0.57in;
+    padding-right: 0.45in;
     padding-bottom: 0.25in;
-    padding-left: 0.57in;
+    padding-left: 0.45in;
 }
 
 .resume-body-short-summary {
