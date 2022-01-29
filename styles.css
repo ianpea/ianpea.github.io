@@ -137,6 +137,9 @@
         align-items: center;
         animation: 0.5s slideinright ease-in-out;
     }
+    #email-btn {
+        margin-right: 1rem;
+    }
     .body {
         display: flex;
         flex: 1 1;
@@ -149,6 +152,10 @@
         width: 50px;
         border-bottom: 1px solid lightgray;
         display: block;
+    }
+    .role-stack {
+        display: flex;
+        flex-direction: column;
     }
     .portfolio-ic {
         width: 64px;
@@ -191,6 +198,12 @@
         align-items: center;
         margin-right: 1rem;
         margin-top: 0.5rem;
+    }
+    #email-btn {
+        margin-left: 1rem;
+    }
+    #location-ic {
+        margin-right: 1rem;
     }
     .resume-btn,
     .location-btn {
@@ -284,6 +297,14 @@
     }
     .portfolio-preview {
         width: 100%;
+    }
+    .role-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #email-btn {
+        margin: auto;
     }
     .footer {
         max-width: 100%;
