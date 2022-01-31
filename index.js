@@ -21,8 +21,75 @@ function baseUrl() {
     }
 
 }
+
+window.nightmode = JSON.parse(window.localStorage.getItem('nightmode')) === false ? false : true;
+
+console.log(window.nightmode);
+$("body").removeClass("preload");
+
 $(window).on('load', function() {
-    $("body").removeClass("preload ");
+    if (window.nightmode) {
+        $("#night-mode-btn i").addClass("fa-moon text-white");
+        $("#night-mode-btn i").removeClass("fa-sun text-dark");
+        $('#body-container').addClass("bg-dark");
+        $('#body-container').removeClass("bg-white");
+        $("p").addClass("text-white");
+        $("p").removeClass("text-dark");
+    } else {
+        $("#night-mode-btn i").addClass("fa-sun text-dark");
+        $("#night-mode-btn i").removeClass("fa-moon text-white");
+        $('#body-container').addClass("bg-white");
+        $('#body-container').removeClass("bg-dark");
+        $("p").addClass("text-dark");
+        $("p").removeClass("text-white");
+    }
+    $("#email-btn").hover(function() {
+        $("#email-btn i").addClass("fa-envelope-open-text");
+        $("#email-btn i").removeClass("fa-envelope");
+    })
+
+    $("#night-mode-btn").click(function() {
+        if (window.nightmode) {
+            $("#night-mode-btn i").addClass("fa-sun text-white");
+            $("#night-mode-btn i").removeClass("fa-moon text-white");
+            $('#body-container').addClass("bg-white");
+            $('#body-container').removeClass("bg-dark");
+
+            $("p").addClass("text-dark");
+            $("p").removeClass("text-white");
+        } else {
+            $("#night-mode-btn i").addClass("fa-moon text-dark");
+            $("#night-mode-btn i").removeClass("fa-sun text-dark");
+            $('#body-container').addClass("bg-dark");
+            $('#body-container').removeClass("bg-white");
+
+            $("p").addClass("text-white");
+            $("p").removeClass("text-dark");
+        }
+        window.nightmode = !window.nightmode;
+        window.localStorage.setItem('nightmode', window.nightmode);
+        $("#night-mode-btn").mouseleave();
+    });
+
+    $("#night-mode-btn").hover(function() {
+        if (window.nightmode) {
+            $("#night-mode-btn i").addClass("fa-sun text-white");
+            $("#night-mode-btn i").removeClass("fa-moon text-dark");
+        } else {
+            $("#night-mode-btn i").addClass("fa-moon text-dark");
+            $("#night-mode-btn i").removeClass("fa-sun text-white");
+        }
+    });
+
+    $("#night-mode-btn").mouseleave(function() {
+        if (window.nightmode) {
+            $("#night-mode-btn i").addClass("fa-moon text-white");
+            $("#night-mode-btn i").removeClass("fa-sun text-dark");
+        } else {
+            $("#night-mode-btn i").addClass("fa-sun text-dark");
+            $("#night-mode-btn i").removeClass("fa-moon text-white");
+        }
+    });
 
     $("#email-btn").hover(function() {
         $("#email-btn i").addClass("fa-envelope-open-text");

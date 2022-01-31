@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div class="body-content preload bg-dark">
+    <div id="body-container" class="body-content preload bg-dark">
         <div class="header-wrapper">
             <div class="header">
                 <div id="header-row-sticky" class="header-row-sticky bg-dark bg-gradient text-white">
@@ -33,15 +33,15 @@
                         <i class="fas fa-chevron-up fa-2x"></i>
                     </div>
                     <div class="flex-fill">&nbsp;</div>
-                    <div class="header-end me-3">
-                        <i class="fas fa-file-invoice pt-1 fa-lg faded"></i>
+                    <div class="header-end me-3 faded">
+                        <i class="fas fa-file-invoice pt-1 fa-lg"></i>
                         <div class="resume-btn" onclick="window.open( '/resume/index.html', '_target');">
                             <h3>Resume</h3> <span class="hideable"><i class="fas fa-chevron-right"></i></span>
                         </div>
                     </div>
                 </div>
                 <div class="header-row slide-in-left">
-                    <h3 class="text-white">Ian Pee</h3>
+                    <h3 class="faded">Ian Pee</h3>
                     <div class="d-flex flex-fill py-3">
                         <div>
                             <a id="email-btn" class="slide-in-left" href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio...">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="header-end slide-in-right">
-                        <div class="resume-btn text-white" onclick="window.open( '/resume/index.html', '_target');">
+                        <div class="resume-btn faded" onclick="window.open( '/resume/index.html', '_target');">
                             <i id="location-ic" class="fas fa-file-invoice pt-1 fa-2x faded"></i>
                             <h3>Resume</h3> <span id="resume-btn-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x"></i></span>
                         </div>
@@ -79,9 +79,8 @@
                 <p>Full Stack / Software Engineer with 2 years experience in developing full stack web & android applications.</p>
                 <p>Past projectes includes a suite of <a href="/portfolio/integrated-logistics-system/index.html">integrated applications</a> working together to provide vital operation handling and data visualisation.</p>
                 <p>
-                    Drop me an
-                    <a class="slide-in-left" href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio...">
-                        email</a> if you have any inquiries.
+                    Drop me an email if you have any inquiries at <a class="slide-in-left" href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio...">
+                        ian.peewujian@gmail.com</a>.
                 </p>
             </div>
             <div class="portfolio-wrapper">
@@ -130,19 +129,22 @@
         </div>
         <div class="footer-wrapper">
             <div class="footer">
-                <div class="footer-btn linkedin me-3" onclick="window.open( 'https://linkedin.com/in/ian-pee-wu-jian', '_target');">
-                    <i class="fab fa-linkedin-in p-2 me-2 border rounded-2 footer-btn-ic"></i></div>
-                <div class="footer-btn github" onclick="window.open( 'https://github.com/ianpea', '_target');">
-                    <i class="fab fa-github p-2 me-2 border rounded-2 footer-btn-ic"></i></div>
+                <div class="footer-btn linkedin" onclick="window.open( 'https://linkedin.com/in/ian-pee-wu-jian', '_target');">
+                    <i class="fab fa-linkedin-in p-2 border rounded-2 footer-btn-ic"></i></div>
+                <div id="night-mode-btn" class="night-mode-btn mx-3">
+                    <i class="fas fa-moon text-white fa-2x"></i>
+                </div>
+                <div class="footer-btn github " onclick="window.open( 'https://github.com/ianpea', '_target'); ">
+                    <i class="fab fa-github p-2 border rounded-2 footer-btn-ic "></i></div>
             </div>
-            <div class="text-white pt-2">
-                <a id="email-btn" class="slide-in-left" href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio...">
+            <div class="text-white pt-2 ">
+                <a id="email-btn " class="slide-in-left " href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio... ">
                     ian.peewujian@gmail.com
                 </a>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/index.js">
+    <script type="text/javascript " src="/index.js ">
     </script>
 </body>
 

@@ -236,6 +236,12 @@
     .footer-btn:hover {
         cursor: pointer;
     }
+    #night-mode-btn {
+        display: flex;
+        flex: 1 1;
+        align-items: center;
+        cursor: pointer;
+    }
 }
 
 
