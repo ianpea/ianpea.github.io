@@ -13,6 +13,11 @@ body {
     overflow-x: hidden;
 }
 
+@page {
+    size: 8.5in 12in;
+    margin: 0mm;
+}
+
 @media print {
     @page {
         size: 8.5in 12in;
@@ -31,6 +36,9 @@ body {
     }
     .print-button {
         display: none !important;
+    }
+    footer {
+        page-break-after: always;
     }
 }
 
@@ -140,6 +148,7 @@ ul {
     display: flex;
     flex-direction: column;
     margin-top: 0.2in;
+    min-width: 2.5in;
 }
 
 .resume-timeline-container {
