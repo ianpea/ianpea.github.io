@@ -82,7 +82,6 @@ $(window).on('load', function() {
     });
 
     $("#night-mode-btn").mouseleave(function() {
-        $(this).find("#night-mode-btn").addClass("spin");
         if (window.nightmode) {
             $("#night-mode-btn i").addClass("fa-moon text-white");
             $("#night-mode-btn i").removeClass("fa-sun text-dark");
@@ -108,14 +107,6 @@ $(window).on('load', function() {
     $(".footer-btn").hover(function() {
         $(this).find(".footer-btn-ic").addClass("spin");
     })
-
-
-    $(".night-mode-btn").bind("webkitAnimationEnd mozAnimationEnd animationend", function() {
-        $(this).find(".footer-btn-ic").removeClass("spin");
-    })
-
-    $(".night-mode-btn").hover(function() {})
-
 
     $(".resume-btn").hover(function() {
         $("#resume-btn-ic").removeClass("hidden")
