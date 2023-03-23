@@ -12,7 +12,8 @@
     <title>ianpea</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -26,122 +27,101 @@
 
 <body>
     <div id="body-container" class="body-content preload bg-dark">
-        <div class="header-wrapper">
-            <div class="header">
+        <div class="dynamic-content-holder pt-4">
+            <div class="d-flex flex-fill">
+                <div class="text-white mt-4 slide-in-left px-3" style="text-align:justify;">
+                    <p>Hello, I'm <i class="fa-solid fa-code"></i> Ian <i class="fa-solid fa-code"></i>,</p>
+                    <p class="ms-4"><i class="fa-solid fa-mug-hot me-3"></i>With 3 years experience in developing full stack web & android applications.</p>
+                    <p class="ms-4"><i class="fa-solid fa-network-wired me-3"></i></i>Worked on a suite of <a href="/portfolio/integrated-logistics-system/index.html">integrated applications</a> that provide vital warehouse operation handling and data visualisation.</p>
+                    <p class="ms-4"><i class="fa-solid fa-suitcase me-3"></i>Currently working as a Team lead / Software Engineer for a project with <b>MINDEF</b> to upgrade and refresh their existing system.</p>
+                    <p class="ms-4">
+                        <i class="fa-solid fa-umbrella-beach me-3"></i>Drop me an email if you have any inquiries at <a class="slide-in-left" href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio...">
+                            ian.peewujian@gmail.com</a>.
+                    </p>
+                </div>
+
+            </div>
+            <div class="d-flex flex-column">
                 <div id="header-row-sticky" class="header-row-sticky bg-dark bg-gradient text-white">
                     <div id="to-top-btn" class="m-auto ps-3 slide-in-left">
-                        <i class="fas fa-chevron-up fa-2x"></i>
+                        <i class="fa-solid fa-chevron-up fa-2x"></i>
                     </div>
                     <div class="flex-fill">&nbsp;</div>
-                    <div class="header-end me-3 faded">
-                        <i class="fas fa-file-invoice pt-1 fa-lg"></i>
+                    <div class="d-flex me-3 faded align-items-center justify-content-center">
+                        <i class="fa-solid fa-file-invoice fa-lg"></i>
                         <div class="resume-btn" onclick="window.open( '/resume/index.html', '_target');">
-                            <h3>Resume</h3> <span class="hideable"><i class="fas fa-chevron-right"></i></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-row slide-in-left">
-                    <h3 class="faded">Ian Pee</h3>
-                    <div class="d-flex flex-fill py-3">
-                        <div>
-                            <a id="email-btn" class="slide-in-left" href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio...">
-                                <i class="fas fa-envelope fa-2x faded"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="header-end slide-in-right">
-                        <div class="resume-btn faded" onclick="window.open( '/resume/index.html', '_target');">
-                            <i id="location-ic" class="fas fa-file-invoice pt-1 fa-2x faded"></i>
-                            <h3>Resume</h3> <span id="resume-btn-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x"></i></span>
+                            <h4 class="m-0 ms-2">Resume</h4> <span class="hideable"><i class="fa-solid fa-chevron-right"></i></span>
                         </div>
                     </div>
                 </div>
                 <div>&nbsp;</div>
-                <div class="header-row">
-                    <h4 class="faded slide-in-left role-stack">
-                        <div>Full Stack Engineer</div>
+                <div class="d-flex flex-column">
+                    <div class="dynamic-content-item faded m-0 slide-in-left">
                         <div>Software Engineer</div>
-                    </h4>
+                    </div>
                     <div class="flex-fill">&nbsp;</div>
-                    <h4 class="header-end faded">
+                    <div class="dynamic-content-item faded m-0 slide-in-left">
                         <div class="location-btn">
-                            <i class="fas fa-map-marker-alt pt-1 fa-lg" id="location-ic"></i> Singapore
-                            <span id="location-btn-ic" class="hideable hidden">
-                                <i class="fas fa-chevron-right"></i>
-                            </span>
+                            <i class="fa-solid fa-map-marker-alt fa-lg" id="location-ic"></i>Singapore
                         </div>
-                    </h4>
+                    </div>
+                    <div class="flex-fill">&nbsp;</div>
+                    <div class="dynamic-content-item">
+                        <div class="resume-btn faded slide-in-right" onclick="window.open( '/resume/index.html', '_target');">
+                            <i id="location-ic" class="fa-solid fa-file-invoice fa-lg faded"></i>
+                            <div class="m-0">Resume</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="body">
-            <div class="d-flex flex-fill">
-                <div class="text-white mt-4 pt-2 slide-in-left px-3" style="text-align:justify;">
-                    <p>With 3 years experience in developing full stack web & android applications.</p>
-                    <p>Worked on a suite of <a href="/portfolio/integrated-logistics-system/index.html">integrated applications</a> that provide vital warehouse operation handling and data visualisation.</p>
-                    <p></p>
-                    <p>
-                        Drop me an email if you have any inquiries at <a class="slide-in-left" href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio...">
-                            ian.peewujian@gmail.com</a>.
-                    </p>
-                </div>
-                <!-- <div style="flex-basis: 30%;" class="d-flex flex-fill flex-wrap slide-in-right justify-content-between">
-                    <span class="skill tech">Angular</span>
-                    <span class="skill tech">Spring Boot</span>
-                    <span class="skill tech">Spring Security</span>
-                    <span class="skill tech">Java</span>
-                    <span class="skill tech">Weblogic Server</span>
-                    <span class="skill tech">Oracle/MySQL</span>
-                    <span class="skill tech">Spring Security</span>
-                    <span class="skill soft">Problem-solving</span>
-                    <span class="skill soft">Critical thinking</span>
-                    <span class="skill soft">Creativity</span>
-                    <span class="skill soft">Resource Mgmt</span>
-                    <span class="skill soft">People Mgmt (Dev)</span>
-                    <span class="skill soft">Requirements Gathering</span>
-                    <span class="skill soft">Organization</span>
-                </div> -->
-            </div>
+        <div class="body pt-4">
             <div class="portfolio-wrapper">
-                <div id="portfolio-main" class="portfolio slide-in-right">
-                    <div class="portfolio-brand-ic">
-                        <i class="fab fa-angular fa-3x portfolio-ic ng"></i>
-                        <i class="fab fa-php fa-3x text-primary pt-2 portfolio-ic"></i>
-                        <div>&nbsp;</div>
-                        <div class="bg-white">
-                            <img src="/assets/logo-mysql-170x115.png" width="64px" alt="MySQL">
+                <div class="d-flex flex-fill justify-content-start">
+                    <div id="portfolio-main" class="portfolio slide-in-right">
+                        <div class="portfolio-brand-ic">
+                            <i class="fa-brands fa-angular fa-3x portfolio-ic ng"></i>
+                            <i class="fa-brands fa-php fa-3x text-primary pt-2 portfolio-ic"></i>
+                            <div>&nbsp;</div>
+                            <div class="bg-white">
+                                <img src="/assets/logo-mysql-170x115.png" width="64px" alt="MySQL">
 
+                            </div>
+                        </div>
+                        <div class="portfolio-preview-wrapper">
+                            <img class="portfolio-preview" src="/assets/cubiscan_assignment.gif" alt="portfolio-main preview">
+                            <canvas class="logoblur"></canvas>
+                        </div>
+                        <div class="d-flex flex-fill">
+                            <span id="portfolio-main-ic" class="hideable hidden"><i class="fa-solid fa-chevron-right fa-2x text-white"></i></span>
                         </div>
                     </div>
-                    <div class="portfolio-preview-wrapper">
-                        <img class="portfolio-preview" src="/assets/cubiscan_assignment.gif" alt="portfolio-main preview">
-                        <canvas class="logoblur"></canvas>
-                    </div>
-                    <div class="d-flex flex-fill">
-                        <span id="portfolio-main-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x text-white"></i></span>
+                </div>
+                <div class="d-flex flex-fill justify-content-end">
+                    <div id="portfolio-d3" class="portfolio slide-in-left">
+                        <div class="portfolio-brand-ic">
+                            <img src="/assets/d3js-icon.svg" width="48" height="48" alt="d3-icon">
+                            <i class="fa-brands fa-angular fa-3x portfolio-ic ng"></i>
+                        </div>
+                        <div>
+                            <img class="portfolio-preview" src="/assets/portfolio-d3-preview.gif" alt="portfolio-d3 preview">
+                        </div>
+                        <div class="d-flex flex-fill">
+                            <span id="portfolio-d3-ic" class="hideable hidden"><i class="fa-solid fa-chevron-right fa-2x text-white"></i></span>
+                        </div>
                     </div>
                 </div>
-                <div id="portfolio-d3" class="portfolio slide-in-left">
-                    <div class="portfolio-brand-ic">
-                        <img src="/assets/d3js-icon.svg" width="48" height="48" alt="d3-icon">
-                        <i class="fab fa-angular fa-3x portfolio-ic ng"></i>
-                    </div>
-                    <div>
-                        <img class="portfolio-preview" src="/assets/portfolio-d3-preview.gif" alt="portfolio-d3 preview">
-                    </div>
-                    <div class="d-flex flex-fill">
-                        <span id="portfolio-d3-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x text-white"></i></span>
-                    </div>
-                </div>
-                <div id="portfolio-ad" class="portfolio slide-in-right">
-                    <div class="portfolio-brand-ic">
-                        <i class="fab fa-android fa-3x portfolio-ic ad"></i>
-                    </div>
-                    <div>
-                        <img src="https://user-images.githubusercontent.com/38518431/140499638-fe891bea-ed36-4393-8e3d-59cf544ebb21.gif" width="100%" alt="">
-                    </div>
-                    <div class="d-flex flex-fill">
-                        <span id="portfolio-ad-ic" class="hideable hidden"><i class="fas fa-chevron-right fa-2x text-white"></i></span>
+                <div class="d-flex flex-fill justify-content-start">
+                    <div id="portfolio-ad" class="portfolio slide-in-right">
+                        <div class="portfolio-brand-ic">
+                            <i class="fa-brands fa-android fa-3x portfolio-ic ad"></i>
+                        </div>
+                        <div>
+                            <img src="https://user-images.githubusercontent.com/38518431/140499638-fe891bea-ed36-4393-8e3d-59cf544ebb21.gif" width="100%" alt="">
+                        </div>
+                        <div class="d-flex flex-fill">
+                            <span id="portfolio-ad-ic" class="hideable hidden"><i class="fa-solid fa-chevron-right fa-2x text-white"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -149,12 +129,12 @@
         <div class="footer-wrapper">
             <div class="footer">
                 <div class="footer-btn linkedin" onclick="window.open( 'https://linkedin.com/in/ian-pee-wu-jian', '_target');">
-                    <i class="fab fa-linkedin-in p-2 border rounded-2 footer-btn-ic"></i></div>
+                    <i class="fa-brands fa-linkedin-in p-2 border rounded-2 footer-btn-ic"></i></div>
                 <div id="night-mode-btn" class="night-mode-btn mx-3">
-                    <i class="fas fa-moon text-white fa-2x"></i>
+                    <i class="fa-solid fa-moon text-white fa-2x"></i>
                 </div>
                 <div class="footer-btn github " onclick="window.open( 'https://github.com/ianpea', '_target'); ">
-                    <i class="fab fa-github p-2 border rounded-2 footer-btn-ic "></i></div>
+                    <i class="fa-brands fa-github p-2 border rounded-2 footer-btn-ic "></i></div>
             </div>
             <div class="text-white pt-2 ">
                 <a id="email-btn " class="slide-in-left " href="mailto:ian.peewujian@gmail.com?Subject=We are interested in your portfolio... ">
