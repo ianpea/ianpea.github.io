@@ -240,15 +240,12 @@
         padding-top: 1rem;
     }
     .footer-btn {
-        font-size: 2rem;
+        font-size: 1rem;
     }
     .footer-btn:hover {
         cursor: pointer;
     }
     #night-mode-btn {
-        display: flex;
-        flex: 1 1;
-        align-items: center;
         cursor: pointer;
     }
     .dynamic-content-holder {
@@ -260,6 +257,7 @@
         display: flex;
         flex-direction: row-reverse;
         white-space: nowrap;
+        font-size: 0.75rem;
     }
 }
 
@@ -353,6 +351,17 @@
     display: none;
 }
 
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 16px;
+    /* color: #2E3D48; */
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
 
 /* Keyframes */
 
@@ -426,5 +435,55 @@
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        color: transparent;
+    }
+    50% {
+        color: grey;
+    }
+}
+
+@-moz-keyframes blink {
+    from,
+    to {
+        color: transparent;
+    }
+    50% {
+        color: grey;
+    }
+}
+
+@-webkit-keyframes blink {
+    from,
+    to {
+        color: transparent;
+    }
+    50% {
+        color: grey;
+    }
+}
+
+@-ms-keyframes blink {
+    from,
+    to {
+        color: transparent;
+    }
+    50% {
+        color: grey;
+    }
+}
+
+@-o-keyframes blink {
+    from,
+    to {
+        color: transparent;
+    }
+    50% {
+        color: grey;
     }
 }
