@@ -25,6 +25,26 @@
     text-align: center;
 }
 
+.skill {
+    color: white;
+    font-size: 0.6rem;
+    border-radius: 4px;
+    background: crimson;
+    max-height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem 0 0.5rem;
+    cursor: pointer;
+}
+
+.skill.tech {
+    background: crimson;
+}
+
+.skill.soft {
+    background: sandybrown;
+}
+
 
 /* PC Screen */
 
