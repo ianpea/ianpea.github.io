@@ -193,9 +193,15 @@
         position: relative;
         margin-top: 1rem;
     }
-    .portfolio:hover {
+    .portfolio-left:hover {
         cursor: pointer;
-        box-shadow: black 20px 6px 20px 0px;
+        box-shadow: lightgrey 20px 6px 20px 0px;
+        padding-left: 1rem;
+        padding-right: 1rem !important;
+    }
+    .portfolio-right:hover {
+        cursor: pointer;
+        box-shadow: lightgrey -20px 6px 20px 0px;
         padding-left: 1rem;
         padding-right: 1rem !important;
     }
@@ -365,8 +371,7 @@
 
 .greeting-text {
     color: #000!important;
-    /* font-size: 70px; */
-    /* line-height: 1.1; */
+    text-align: left;
 }
 
 .wave-emoji {
