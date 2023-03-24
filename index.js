@@ -72,6 +72,7 @@ $(window).on('load', function() {
     });
 
     $("#night-mode-btn").hover(function() {
+        $("#night-mode-btn i").addClass("spin");
         if (window.nightmode) {
             $("#night-mode-btn i").addClass("fa-sun text-white");
             $("#night-mode-btn i").removeClass("fa-moon text-dark");
@@ -81,7 +82,13 @@ $(window).on('load', function() {
         }
     });
 
+    $("#night-mode-btn i").bind("webkitAnimationEnd mozAnimationEnd animationend", function() {
+        $(this).find("#night-mode-btn i").removeClass("spin");
+    })
+
+
     $("#night-mode-btn").mouseleave(function() {
+        $("#night-mode-btn i").removeClass("spin");
         if (window.nightmode) {
             $("#night-mode-btn i").addClass("fa-moon text-white");
             $("#night-mode-btn i").removeClass("fa-sun text-dark");
@@ -90,7 +97,6 @@ $(window).on('load', function() {
             $("#night-mode-btn i").removeClass("fa-moon text-white");
         }
     });
-
     $("#email-btn").hover(function() {
         $("#email-btn i").addClass("fa-envelope-open-text");
         $("#email-btn i").removeClass("fa-envelope");
