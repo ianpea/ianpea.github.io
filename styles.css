@@ -272,6 +272,9 @@
 /* Phone Screen */
 
 @media (min-width:320px) and (max-width:600px) {
+    .body {
+        padding-top: 32px;
+    }
     .dynamic-content-holder {
         display: flex;
         flex-direction: column;

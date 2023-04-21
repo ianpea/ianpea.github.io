@@ -35,6 +35,8 @@ $(window).on('load', function() {
         $('#body-container').removeClass("bg-white");
         $("p").addClass("text-white");
         $("p").removeClass("text-dark");
+        $('#header-row-sticky').removeClass('bg-white text-black');
+        $('#header-row-sticky').addClass('bg-black text-white');
     } else {
         $("#night-mode-btn i").addClass("fa-sun text-dark");
         $("#night-mode-btn i").removeClass("fa-moon text-white");
@@ -42,6 +44,8 @@ $(window).on('load', function() {
         $('#body-container').removeClass("bg-dark");
         $("p").addClass("text-dark");
         $("p").removeClass("text-white");
+        $('#header-row-sticky').removeClass('bg-black text-white');
+        $('#header-row-sticky').addClass('bg-white text-black');
     }
     $("#email-btn").hover(function() {
         $("#email-btn i").addClass("fa-envelope-open-text");
@@ -57,6 +61,9 @@ $(window).on('load', function() {
 
             $("p").addClass("text-dark");
             $("p").removeClass("text-white");
+            $('#header-row-sticky').removeClass('bg-dark text-white');
+            $('#header-row-sticky').addClass('bg-white text-black');
+
         } else {
             $("#night-mode-btn i").addClass("fa-moon text-dark");
             $("#night-mode-btn i").removeClass("fa-sun text-dark");
@@ -65,6 +72,8 @@ $(window).on('load', function() {
 
             $("p").addClass("text-white");
             $("p").removeClass("text-dark");
+            $('#header-row-sticky').removeClass('bg-white text-black');
+            $('#header-row-sticky').addClass('bg-black text-white');
         }
         window.nightmode = !window.nightmode;
         window.localStorage.setItem('nightmode', window.nightmode);
