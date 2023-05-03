@@ -42,4 +42,8 @@ $(this).on('load', function() {
     $("#inputmodal").modal('show');
     $("#modaltitle").html(dos[i]);
     console.log(dos[i]);
+    $('#inputmodal').keypress(function(e) {
+        if (e.keyCode == 13)
+            next()
+    });
 });
