@@ -242,12 +242,16 @@ ul {
     font-weight: 550;
     font-size: 0.13in;
     white-space: nowrap;
+    min-width: 60px;
+    max-width: 60px;
 }
 
 .resume-timeline-content-date-e {
     font-weight: 550;
     font-size: 0.13in;
     white-space: nowrap;
+    min-width: 60px;
+    max-width: 60px;
 }
 
 .resume-timeline-content-body {
@@ -256,6 +260,7 @@ ul {
     padding-left: 0.1in;
     text-align: justify;
     font-size: 0.15in;
+    width: 440px;
 }
 
 .resume-timeline-content-work-details {
