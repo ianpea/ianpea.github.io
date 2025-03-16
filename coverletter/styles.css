@@ -6,6 +6,7 @@ body {
 
 * {
     -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 .body {
@@ -15,7 +16,7 @@ body {
 
 @media print {
     @page {
-        size: 8.5in 12in;
+        /* size: 8.5in 12in; */
     }
     .cv-canvas {
         margin: 0 auto;

@@ -63,10 +63,6 @@ ul {
     padding-left: 0px;
 }
 
-ul ul {
-    padding-left: 16px;
-}
-
 .resume-canvas {
     margin: 0 auto;
     box-sizing: border-box;
