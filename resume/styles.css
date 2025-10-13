@@ -23,6 +23,7 @@ body {
         size: 8.5in 12in;
         margin: 0mm;
     }
+
     .resume-canvas {
         margin: 0mm;
         box-sizing: border-box;
@@ -31,12 +32,15 @@ body {
         height: 12in;
         background-color: rgb(250, 255, 255, green, blue);
     }
+
     .body {
         margin: 0 !important;
     }
+
     .print-button {
         display: none !important;
     }
+
     footer {
         page-break-after: always;
     }
@@ -47,6 +51,7 @@ body {
         margin: 0 !important;
         padding: 0 !important;
     }
+
     /* .print-button{
         top: unset !important;
         bottom: 16px !important;
@@ -141,12 +146,14 @@ ul {
 .resume-skills-wrapper {
     display: flex;
     flex-direction: column;
-    min-width: 2in;
+    min-width: 1.8in;
+    max-width: 1.8in;
     margin-top: 0.2in;
 }
 
 .resume-timeline-wrapper {
     display: flex;
+    flex: 1 1;
     flex-direction: column;
     margin-top: 0.2in;
     min-width: 2.5in;
@@ -202,7 +209,7 @@ ul {
 .resume-timeline-line-sm {
     border-left: 1px solid black;
     margin-left: 12px;
-    height: 8px;
+    height: 9px;
 }
 
 .resume-timeline-line-pad {
@@ -260,7 +267,7 @@ ul {
     padding-left: 0.1in;
     text-align: justify;
     font-size: 0.15in;
-    width: 440px;
+    width: 500px;
 }
 
 .resume-timeline-content-work-details {
@@ -269,4 +276,17 @@ ul {
 
 .resume-timeline-content-description {
     padding-top: 0.1in;
+}
+
+
+.hyperlink-dark,
+.hyperlink-dark:hover,
+.hyperlink-dark:visited,
+.hyperlink-dark:active {
+    color: #111;
+}
+
+.subtle-note {
+    color: #545454;
+    font-size: 0.12in;
 }
