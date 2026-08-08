@@ -1,0 +1,292 @@
+body {
+    font-family: Georgia, serif;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+.body {
+    /* margin: 1rem; */
+    overflow-x: hidden;
+}
+
+@page {
+    size: 8.5in 12in;
+    margin: 0mm;
+}
+
+@media print {
+    @page {
+        size: 8.5in 12in;
+        margin: 0mm;
+    }
+
+    .resume-canvas {
+        margin: 0mm;
+        box-sizing: border-box;
+        padding: 0in;
+        width: 8.5in;
+        height: 12in;
+        background-color: rgb(250, 255, 255, green, blue);
+    }
+
+    .body {
+        margin: 0 !important;
+    }
+
+    .print-button {
+        display: none !important;
+    }
+
+    footer {
+        page-break-after: always;
+    }
+}
+
+@media (min-width:320px) {
+    .body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* .print-button{
+        top: unset !important;
+        bottom: 16px !important;
+    } */
+}
+
+.print-button {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+.resume-canvas {
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0in;
+    width: 8.5in;
+    height: 12in;
+    background-color: rgb(250, 255, 255, green, blue);
+    box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
+}
+
+.resume-header {
+    display: flex;
+    flex-direction: column;
+    /* height: 1.8in; */
+    background-color: #607d8b;
+    padding-top: 0.15in;
+    padding-right: 0.45in;
+    padding-bottom: 0.25in;
+    padding-left: 0.45in;
+}
+
+.resume-header-name {
+    font-size: 0.35in;
+    color: white;
+}
+
+.resume-header-work-title {
+    font-size: 0.18in;
+    color: white;
+}
+
+.resume-header-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0.12in;
+    color: white;
+    padding-top: 0.15in;
+}
+
+.resume-header-detail a,
+.resume-header-work-title a {
+    color: #cfd8dc;
+}
+
+.resume-header-detail:hover a,
+.resume-header-work-title:hover a {
+    color: white;
+}
+
+.resume-header-detail {
+    display: flex;
+    flex: 1 1 50%;
+}
+
+.resume-header-detail-title {
+    width: 1in;
+}
+
+.resume-body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.15in;
+    padding-right: 0.45in;
+    padding-bottom: 0.25in;
+    padding-left: 0.45in;
+}
+
+.resume-body-short-summary {
+    text-align: justify;
+    text-justify: inter-word;
+    color: black;
+    font-size: 0.15in;
+}
+
+.resume-skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 1.8in;
+    max-width: 1.8in;
+    margin-top: 0.2in;
+}
+
+.resume-timeline-wrapper {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    margin-top: 0.2in;
+    min-width: 2.5in;
+}
+
+.resume-timeline-container {
+    display: inline-flex;
+    /* flex-direction: row; */
+}
+
+.resume-timeline-line-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.resume-timeline-header {
+    font-weight: 600;
+    font-size: 0.2in;
+    padding-left: 0.2in;
+    line-height: 1.2;
+}
+
+.resume-timeline-icon-md {
+    border-radius: 50%;
+    background-color: black;
+    width: 12px;
+    height: 12px;
+}
+
+.resume-timeline-icon-lg {
+    border-radius: 50%;
+    background-color: rgb(47, 47, 47);
+    width: 24px;
+    height: 24px;
+}
+
+.resume-timeline-icon-lg i {
+    position: relative;
+    margin-left: 24%;
+    font-size: 13px;
+}
+
+.resume-timeline-line {
+    display: flex;
+    flex: 1 1;
+    border-left: 1px solid black;
+    margin-left: 12px;
+    height: 12px;
+}
+
+.resume-timeline-line-sm {
+    border-left: 1px solid black;
+    margin-left: 12px;
+    height: 9px;
+}
+
+.resume-timeline-line-pad {
+    border-left: 1px solid black;
+    margin-left: 12px;
+    max-height: 8px;
+}
+
+.resume-timeline-dot {
+    position: relative;
+    border-radius: 50%;
+    background-color: black;
+    margin-left: 8px;
+    padding-top: 25%;
+    width: 8px;
+    height: 8px;
+}
+
+.resume-timeline-content {
+    display: flex;
+    flex: 1 1;
+    flex-direction: row;
+    padding-left: 0.2in;
+    padding-top: 0.02in;
+    padding-bottom: 0.1in;
+}
+
+.resume-timeline-content-skills {
+    display: flex;
+    flex: 1 1;
+    flex-direction: row;
+    padding-left: 0.15in;
+    padding-top: 3px;
+    font-size: 0.15in;
+}
+
+.resume-timeline-content-date-s {
+    font-weight: 550;
+    font-size: 0.13in;
+    white-space: nowrap;
+    min-width: 60px;
+    max-width: 60px;
+}
+
+.resume-timeline-content-date-e {
+    font-weight: 550;
+    font-size: 0.13in;
+    white-space: nowrap;
+    min-width: 60px;
+    max-width: 60px;
+}
+
+.resume-timeline-content-body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.1in;
+    text-align: justify;
+    font-size: 0.15in;
+    width: 500px;
+}
+
+.resume-timeline-content-work-details {
+    font-size: 0.15in;
+}
+
+.resume-timeline-content-description {
+    padding-top: 0;
+}
+
+
+.hyperlink-dark,
+.hyperlink-dark:hover,
+.hyperlink-dark:visited,
+.hyperlink-dark:active {
+    color: #111;
+}
+
+.subtle-note {
+    color: #545454;
+    font-size: 0.12in;
+}
