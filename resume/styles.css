@@ -541,14 +541,20 @@ a {
         font-size: 12px;
     }
 
-    .hero-panel,
-    .card,
+    .hero-panel {
+        background: #33403e;
+    }
+
+    .card {
+        background: #fbf7f0;
+    }
+
     .tag-list span {
         background: transparent;
     }
 
     .hero-link {
-        background: transparent;
+        background: #3b4745;
         border-color: rgba(255, 255, 255, 0.16);
     }
 
