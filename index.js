@@ -12,13 +12,7 @@ window.prodCheck = function() {
 }
 
 function baseUrl() {
-    let prod = prodCheck();
-    if (prod) {
-        return "https://ianpea.github.io";
-    } else {
-        return "http://ianpea.github.io.localhost";
-
-    }
+    return window.location.protocol === "file:" ? "." : window.location.origin;
 
 }
 
