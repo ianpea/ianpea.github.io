@@ -89,12 +89,14 @@ body {
         display: flex;
         flex-direction: row;
     }
+
     .explain-card {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
     .system-nav {
         display: flex;
         flex: 1 1;
@@ -107,10 +109,12 @@ body {
     img {
         width: 100%;
     }
+
     .info-card {
         display: flex;
         flex-direction: column;
     }
+
     .system-nav {
         display: flex;
         flex: 1 1;
