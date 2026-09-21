@@ -25,8 +25,6 @@ body {
     margin: 0;
     font-family: "Source Serif 4", Georgia, serif;
     color: var(--ink);
-    font-variant-ligatures: none;
-    font-feature-settings: "liga" 0, "clig" 0;
     background:
         radial-gradient(circle at top left, rgba(154, 79, 45, 0.18), transparent 28%),
         linear-gradient(145deg, #f7efe2 0%, var(--bg) 52%, #e6d7c3 100%);
@@ -452,10 +450,11 @@ a {
 }
 
 @media (max-width: 980px) {
-
-    /* Keep the desktop composition on mobile without transformed layout boxes.
-     * zoom changes the rendered layout itself, so Safari does not retain a
-     * full-size invisible canvas that can clip text or inflate the page width.
+    /*
+     * Keep the desktop/A4 layout completely intact on small screens.
+     * The sheet remains 210mm wide; only the whole desktop canvas is scaled.
+     * 210mm is ~793.7 CSS px and the desktop page-shell contributes 18px
+     * padding on each side, so the complete canvas is ~829.7px wide.
      */
     body {
         overflow-x: hidden;
@@ -464,7 +463,8 @@ a {
     .page-shell {
         width: calc(210mm + 36px);
         min-height: calc(297mm + 36px);
-        zoom: calc(100vw / 829.7px);
+        transform: scale(calc(100vw / 829.7));
+        transform-origin: top left;
     }
 
     .resume-sheet {
@@ -488,201 +488,65 @@ a {
 
 @media print {
     @page {
-        size: auto;
+        size: A4 portrait;
         margin: 8mm;
     }
 
-    html {
-        font-size: 11px;
-    }
-
     body {
-        margin: 0;
-        overflow: visible;
         background: #fff;
-    }
-
-    /*
-     * Preserve the designed palette in Chromium and WebKit. The prefixed form
-     * remains useful for older Chromium/WebKit print implementations.
-     */
-    .resume-sheet,
-    .resume-sheet * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
     }
 
     .page-shell {
-        display: block;
-        width: auto;
-        min-height: 0;
         padding: 0;
-        transform: none;
-        zoom: 1;
     }
 
     .resume-sheet {
-        display: block;
-        width: 100%;
-        max-width: none;
-        min-height: 0;
-        margin: 0;
+        width: auto;
+        min-height: auto;
         padding: 0;
+        box-shadow: none;
         border: 0;
         border-radius: 0;
-        box-shadow: none;
         background: #fff;
-        backdrop-filter: none;
+    }
+
+    .hero,
+    .card {
+        break-inside: avoid;
     }
 
     .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-        gap: 10px;
-        padding: 10px;
-        color: #f8f4ee;
-        background: #24322f !important;
-        border-radius: 16px;
-        overflow: visible;
-        break-inside: avoid;
-        page-break-inside: avoid;
+        background: #24322f;
     }
 
     .hero::after {
         content: none;
     }
 
+    html {
+        font-size: 12px;
+    }
+
     .hero-panel {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 5px 7px;
-        min-width: 0;
-        padding: 8px;
-        background: #33403e !important;
-        border: 1px solid rgba(255,255,255,.12);
-        border-radius: 12px;
+        background: #33403e;
     }
 
-    .hero-link {
-        height: auto;
-        min-width: 0;
-        padding: 4px 6px;
-        background: #3b4745 !important;
-        border-color: rgba(255,255,255,.16);
-    }
-
-    .hero-meta-link,
-    .hero-link,
-    .role-topline span {
-        white-space: normal;
-        overflow-wrap: anywhere;
-    }
-
-    /*
-     * Print body: use normal block flow rather than one giant grid. This is the
-     * important pagination boundary. Each section can move between pages, while
-     * the Experiences section itself can fragment naturally.
-     */
-    .content-grid,
-    .sidebar,
-    .main-column {
-        display: block;
-    }
-
-    .content-grid {
-        margin-top: 8px;
-    }
-
-    .sidebar {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 7px;
-        font-size: .76rem;
-        line-height: 1.35;
-    }
-
-    /*
-     * Every sidebar panel is atomic in print. If a whole panel cannot fit in
-     * the remaining page space, move it to the next page rather than slicing
-     * its contents. Grid children also need min-width: 0 so long text cannot
-     * force a panel outside the printable width.
-     */
-    .sidebar > .card {
-        min-width: 0;
-        width: 100%;
-        margin: 0;
-        overflow: visible;
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-
-    .sidebar > .card *,
-    .card,
-    .card * {
-        min-width: 0;
-        max-width: 100%;
-        overflow-wrap: anywhere;
-    }
-
-    .skills-category,
-    .stacked-item,
-    .link-list li,
-    .compact-card p {
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-
-    .main-column {
-        margin-top: 8px;
-    }
-
-    .card,
-    .feature-card {
-        padding: 8px;
-        color: var(--ink);
-        background: #fbf7f0 !important;
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        overflow: visible;
-    }
-
-    .feature-card {
-        break-inside: auto;
-        page-break-inside: auto;
-    }
-
-    .role {
-        padding: 7px 0;
-        overflow: visible;
-        break-inside: auto;
-        page-break-inside: auto;
-    }
-
-    .role-topline {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        break-after: avoid;
-        page-break-after: avoid;
-    }
-
-    .role ul {
-        line-height: 1.28;
-    }
-
-    .role li {
-        break-inside: auto;
-        page-break-inside: auto;
-        orphans: 2;
-        widows: 2;
-    }
-
-    .stacked-item {
-        break-inside: avoid;
-        page-break-inside: avoid;
+    .card {
+        background: #fbf7f0;
     }
 
     .tag-list span {
-        background: transparent !important;
+        background: transparent;
+    }
+
+    .hero-link {
+        background: #3b4745;
+        border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .profile-photo {
+        border-color: rgba(255, 255, 255, 0.35);
+        box-shadow: none;
     }
 
     .print-controls {
