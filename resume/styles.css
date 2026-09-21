@@ -490,27 +490,45 @@ a {
 }
 
 @media print {
+    /*
+     * Printing is intentionally independent from the responsive screen rules.
+     * Do not force a paper size here: the browser/user may choose A4, Letter,
+     * A3, or another supported sheet. A modest page margin keeps content clear
+     * of printer/PDF edges across those formats.
+     */
     @page {
-        size: A4 portrait;
         margin: 8mm;
     }
 
+    html {
+        font-size: 12px;
+    }
+
     body {
+        margin: 0;
+        overflow: visible;
         background: #fff;
     }
 
     .page-shell {
+        width: auto;
+        min-height: 0;
         padding: 0;
+        transform: none;
+        transform-origin: initial;
     }
 
     .resume-sheet {
-        width: auto;
-        min-height: auto;
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+        margin: 0;
         padding: 0;
         box-shadow: none;
         border: 0;
         border-radius: 0;
         background: #fff;
+        backdrop-filter: none;
     }
 
     .hero,
@@ -524,10 +542,6 @@ a {
 
     .hero::after {
         content: none;
-    }
-
-    html {
-        font-size: 12px;
     }
 
     .hero-panel {
