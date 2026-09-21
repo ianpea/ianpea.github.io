@@ -488,17 +488,16 @@ a {
 
 @media print {
     /*
-     * Printing is intentionally independent from the responsive screen rules.
-     * Do not force a paper size here: the browser/user may choose A4, Letter,
-     * A3, or another supported sheet. A modest page margin keeps content clear
-     * of printer/PDF edges across those formats.
+     * Print is a conventional document flow, independent of the A4-style
+     * screen preview. This deliberately favours reliable pagination over
+     * reproducing the screen card layout pixel-for-pixel.
      */
     @page {
-        margin: 8mm;
+        margin: 10mm;
     }
 
     html {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     body {
@@ -508,28 +507,49 @@ a {
     }
 
     .page-shell {
+        display: block;
         width: auto;
         min-height: 0;
         padding: 0;
         transform: none;
-        transform-origin: initial;
         zoom: 1;
     }
 
     .resume-sheet {
-        width: 100%;
+        display: block;
+        width: auto;
         max-width: none;
         min-height: 0;
         margin: 0;
         padding: 0;
-        box-shadow: none;
         border: 0;
         border-radius: 0;
+        box-shadow: none;
         background: #fff;
         backdrop-filter: none;
     }
 
-    /* Let text wrap instead of relying on screen-only no-wrap constraints. */
+    .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px;
+        border-radius: 12px;
+        background: #24322f;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .hero::after {
+        content: none;
+    }
+
+    .hero-panel {
+        min-width: 0;
+        padding: 8px;
+        background: #33403e;
+    }
+
     .hero-meta-link,
     .hero-link,
     .role-topline span {
@@ -538,45 +558,76 @@ a {
     }
 
     /*
-     * Safari/iOS can fragment grid cards even when the outer card asks not to
-     * break. Protect the actual readable units as well, so a page boundary can
-     * fall between bullets/sections but never through their text.
+     * Use normal block flow for the resume body when printing. CSS Grid
+     * fragmentation is inconsistent in mobile Safari; a single document
+     * column gives the browser unambiguous page-break opportunities.
      */
-    .hero,
-    .sidebar .card,
-    .stacked-item,
-    .role-topline,
-    .role li {
+    .content-grid,
+    .sidebar,
+    .main-column {
+        display: block;
+    }
+
+    .content-grid {
+        margin-top: 8px;
+    }
+
+    .main-column {
+        margin-top: 8px;
+    }
+
+    .card,
+    .feature-card {
+        padding: 8px;
+        border-radius: 10px;
+        background: #fbf7f0;
+    }
+
+    .sidebar {
+        columns: 2;
+        column-gap: 8px;
+        font-size: 0.76rem;
+        line-height: 1.35;
+    }
+
+    .sidebar .card {
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 8px;
         break-inside: avoid;
         page-break-inside: avoid;
     }
 
-    .role-topline {
-        break-after: avoid;
-        page-break-after: avoid;
-    }
-
-    /* The Experiences card is taller than one sheet, so it must be allowed to
-       fragment. Preventing this at card level makes mobile Safari clip it. */
     .feature-card {
+        display: block;
         break-inside: auto;
         page-break-inside: auto;
     }
 
-    .hero {
-        background: #24322f;
+    .role {
+        display: block;
+        padding: 7px 0;
+        break-inside: auto;
+        page-break-inside: auto;
     }
 
-    .hero::after {
-        content: none;
+    .role-topline {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        break-after: avoid;
+        page-break-after: avoid;
     }
 
-    .hero-panel {
-        background: #33403e;
+    .role li {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        orphans: 2;
+        widows: 2;
     }
 
-    .card {
-        background: #fbf7f0;
+    .stacked-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     .tag-list span {
