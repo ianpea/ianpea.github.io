@@ -25,6 +25,8 @@ body {
     margin: 0;
     font-family: "Source Serif 4", Georgia, serif;
     color: var(--ink);
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0;
     background:
         radial-gradient(circle at top left, rgba(154, 79, 45, 0.18), transparent 28%),
         linear-gradient(145deg, #f7efe2 0%, var(--bg) 52%, #e6d7c3 100%);
@@ -450,6 +452,7 @@ a {
 }
 
 @media (max-width: 980px) {
+
     /*
      * Keep the desktop/A4 layout completely intact on small screens.
      * The sheet remains 210mm wide; only the whole desktop canvas is scaled.
