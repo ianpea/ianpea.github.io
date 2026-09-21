@@ -601,8 +601,33 @@ a {
         line-height: 1.35;
     }
 
-    .sidebar .card {
+    /*
+     * Every sidebar panel is atomic in print. If a whole panel cannot fit in
+     * the remaining page space, move it to the next page rather than slicing
+     * its contents. Grid children also need min-width: 0 so long text cannot
+     * force a panel outside the printable width.
+     */
+    .sidebar > .card {
+        min-width: 0;
+        width: 100%;
         margin: 0;
+        overflow: visible;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .sidebar > .card *,
+    .card,
+    .card * {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .skills-category,
+    .stacked-item,
+    .link-list li,
+    .compact-card p {
         break-inside: avoid;
         page-break-inside: avoid;
     }
