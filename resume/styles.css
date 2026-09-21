@@ -453,11 +453,9 @@ a {
 
 @media (max-width: 980px) {
 
-    /*
-     * Keep the desktop/A4 layout completely intact on small screens.
-     * The sheet remains 210mm wide; only the whole desktop canvas is scaled.
-     * 210mm is ~793.7 CSS px and the desktop page-shell contributes 18px
-     * padding on each side, so the complete canvas is ~829.7px wide.
+    /* Keep the desktop composition on mobile without transformed layout boxes.
+     * zoom changes the rendered layout itself, so Safari does not retain a
+     * full-size invisible canvas that can clip text or inflate the page width.
      */
     body {
         overflow-x: hidden;
@@ -466,8 +464,7 @@ a {
     .page-shell {
         width: calc(210mm + 36px);
         min-height: calc(297mm + 36px);
-        transform: scale(calc(100vw / 829.7));
-        transform-origin: top left;
+        zoom: calc(100vw / 829.7px);
     }
 
     .resume-sheet {
@@ -516,6 +513,7 @@ a {
         padding: 0;
         transform: none;
         transform-origin: initial;
+        zoom: 1;
     }
 
     .resume-sheet {
@@ -529,6 +527,14 @@ a {
         border-radius: 0;
         background: #fff;
         backdrop-filter: none;
+    }
+
+    /* Let text wrap instead of relying on screen-only no-wrap constraints. */
+    .hero-meta-link,
+    .hero-link,
+    .role-topline span {
+        white-space: normal;
+        overflow-wrap: anywhere;
     }
 
     .hero,
