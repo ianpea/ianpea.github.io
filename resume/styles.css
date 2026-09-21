@@ -537,9 +537,30 @@ a {
         overflow-wrap: anywhere;
     }
 
+    /*
+     * Safari/iOS can fragment grid cards even when the outer card asks not to
+     * break. Protect the actual readable units as well, so a page boundary can
+     * fall between bullets/sections but never through their text.
+     */
     .hero,
-    .card {
+    .sidebar .card,
+    .stacked-item,
+    .role-topline,
+    .role li {
         break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .role-topline {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    /* The Experiences card is taller than one sheet, so it must be allowed to
+       fragment. Preventing this at card level makes mobile Safari clip it. */
+    .feature-card {
+        break-inside: auto;
+        page-break-inside: auto;
     }
 
     .hero {
