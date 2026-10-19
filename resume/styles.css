@@ -565,3 +565,7 @@ a {
     display: none !important;
   }
 }
+
+.stronk {
+  text-decoration: underline;
+}
